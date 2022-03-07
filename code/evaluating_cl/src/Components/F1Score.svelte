@@ -137,32 +137,32 @@
 
     /* mobile */
     @media screen and (max-width: 950px) {
-          #heatmap-container{
-            width: 100%;
-            height: 95vh;
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 68% 32%;
-            row-gap: 1.5rem;
-            margin: auto;
-            align-items: center;
-            margin: auto;
-            margin-top: 1rem;
-          }
-          #f1-equations{
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 30% 23% 23%;
-            column-gap: .2rem;
-            align-items: center;
-            height: 100%;
-            width: 70%;
-            margin: 2rem auto;
-            text-align: center;
-          }
+      #heatmap-container{
+        width: 100%;
+        height: 95vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 68% 32%;
+        row-gap: 1.5rem;
+        margin: auto;
+        align-items: center;
+        margin: auto;
+        margin-top: 1rem;
+      }
+      #f1-equations{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 23% 23%;
+        column-gap: .2rem;
+        align-items: center;
+        height: 100%;
+        width: 70%;
+        margin: 2rem auto;
+        text-align: center;
+      }
 
-          .katex, #f1-equations {
-            font-size: .95rem;
-          }
+      .katex, #f1-equations {
+        font-size: .95rem;
+      }
     }
   </style>

@@ -7,8 +7,8 @@
 <div id="intro-icon" style="--ai-color: {aiLogoColor}">
   <a href="https://mlu-explain.github.io"
     ><svg
-      width="50"
-      height="50"
+      width="30"
+      height="30"
       viewBox="0 0 234 216"
     >
       <g id="mlu_robot 1" clip-path="url(#clip0)">
@@ -58,29 +58,29 @@
     display: flex;
     text-transform: uppercase;
     font-weight: bold;
-    color: red;
     flex-direction: row;
-    padding-top: 1rem;
     justify-content: center;
+    align-items: center;
   }
 
   #ai {
     color: var(--ai-color);
-    /* color: red; */
   }
 
   #intro-icon h2 {
     padding-left: 5%;
     font-family: "Amazon Ember Display Heavy";
-    font-size: 21px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    align-self: center;
   }
   #intro-icon > a {
     display: flex;
     text-decoration: none;
-    padding-top: 1rem;
+    padding-top: .5rem;
     padding-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+
   }
   .logo {
     color: #7e93ee;

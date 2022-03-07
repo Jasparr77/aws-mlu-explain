@@ -58,7 +58,6 @@
     we've discussed: <span class='bold'>accuracy</span>, <span class='bold'>precision</span>, <span class='bold'>recall</span>, and the <span class='bold'>f1-score</span>.
     To view this tradeoff explicitly, we'll plot each metric's score as a function of the decision boundary threshold:
 </p>
-<br>
 <div 
     id='error-chart'
     bind:offsetWidth={width}
@@ -70,7 +69,7 @@
             <g transform={`translate(${margin.left - 5} ${accuracyScale(tick) + 0})`}>
                 <!-- svelte-ignore component-name-lowercase -->
                 <line class='y-axis-line' x1="0" x2="{width - margin.right - margin.left}" y1="0" y2="0" stroke="black"></line>
-                <text class='f1-axis-text' y="0" text-anchor="end" dominant-baseline="middle">{formatter(tick)}</text>
+                <text class='error-axis-text' y="0" text-anchor="end" dominant-baseline="middle">{formatter(tick)}</text>
             </g>
         {/each}
         <!-- axis lines -->
@@ -100,12 +99,11 @@
         <!-- axis labels -->
         <text class='error-axis-label' y="{height + margin.bottom}" x="{(width + margin.left) / 2}" text-anchor="middle">Decision Boundary Threshold</text>
         <text class='error-axis-label' y="{margin.left / 3}" x="{-((height ) / 2)}" text-anchor="middle" transform="rotate(-90)">Score</text>
-        <!-- <text class='error-axis-title' y="15" x="{(margin.left + 0 * margin.right)}">Evaluation Metric Tradeoffs (On The Cancer Dataset)</text> -->
 
         <!-- x-ticks -->
         {#each xScale.ticks() as tick}
             <g transform={`translate(${xScale(tick) + 0} ${height - margin.bottom})`}>
-                <text class='f1-axis-text' y="15" text-anchor="end">{tick}</text>
+                <text class='error-axis-text' y="15" text-anchor="end">{tick}</text>
             </g>
         {/each}
         
@@ -120,16 +118,26 @@
 </p>
 
   <style>
+      #error-chart {
+        margin: auto;
+        max-height: 55vh;
+        width: 58%;
+        margin: 1rem auto;
+    }
+
     .error-text {
         text-transform: uppercase;
         font-family: var(--font-heavy);
         stroke-linejoin: round;
         paint-order: stroke fill;
-        stroke-width: 5px;
+        stroke-width: 4.5px;
         pointer-events: none;
         stroke: #f1f3f3;
-        font-size: 1.1rem;
+        font-size: .9rem;
         letter-spacing: 2px;
+    }
+    .error-axis-text {
+        font-size: .9rem;
     }
 
     .y-axis-line {
@@ -154,36 +162,74 @@
 
     .error-axis-label {
         text-transform: uppercase;
-    }
-
-    .error-axis-title {
-        text-transform: uppercase;
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .path-line {
       fill: none;
       stroke-linejoin: round;
       stroke-linecap: round;
-      stroke-width: 8;
+      stroke-width: 6;
     }
 
     .outline-line {
         fill: none;
         stroke: #f1f3f3;
-        stroke-width: 12;
+        stroke-width: 10;
     }
 
-    svg {
-        /* border: 2px solid red; */
+    /* ipad */
+    @media screen and (max-width: 950px) {
+        #error-chart {
+            max-height: 55vh;
+            width: 85%;
+            margin: 1rem auto;
+        }
+        .error-axis-label {
+            font-size: .8rem;
+        }
+        .error-axis-text {
+        font-size: .8rem;
     }
+        .error-text {
+            stroke-width: 3.5px;
+            stroke: #f1f3f3;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+        .path-line {
+        stroke-width: 5;
+        }
+        .outline-line {
+            stroke-width: 9;
+        }
+    }
+    /* mobile */
+    @media screen and (max-width: 750px) {
+        #error-chart {
+            max-height: 55vh;
+            width: 95%;
+            margin: 1rem auto;
+        }
 
-    #error-chart {
-        margin: auto;
-        max-height: 50vh;
-        width: 55%;
-        margin: 1rem auto;
-
+        .error-axis-label {
+            font-size: .75rem;
+        }
+        .error-axis-text {
+        font-size: .7rem;
+    }
+        .error-text {
+            stroke-width: 3px;
+            stroke: #f1f3f3;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+        }
+        .path-line {
+            stroke-width: 4;
+        }
+        .outline-line {
+            stroke-width: 7;
+        }
     }
 
   </style>

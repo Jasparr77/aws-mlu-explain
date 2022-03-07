@@ -70,10 +70,10 @@
 <style>
 
     ul {
-        max-width: 45rem;
+        max-width: 600px;
         margin: auto;
         font-family: var(--font-main);
-        font-size: 21px;
+        font-size: 18px;
         padding-top: .5rem;
     }
     li {
@@ -82,10 +82,10 @@
     }
     table {
       border-collapse: collapse;
-      width: 40%;
+      width: 50%;
       margin: auto;
       max-width: 45rem;
-      font-size: 21px;
+      font-size: 18px;
       font-family: var(--font-main);
     }
     

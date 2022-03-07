@@ -58,10 +58,10 @@
     max-width: 35rem;
   }
   .resource-item {
-    max-width: 45rem;
+    max-width: 600px;
     margin: 0 auto;
     text-align: left;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 1.5em;
     font-family: "Amazon Ember";
     color: white;

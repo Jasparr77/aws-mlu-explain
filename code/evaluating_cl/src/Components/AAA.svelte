@@ -22,7 +22,7 @@
 	const zKey = 'outcome';
 	const titleKey = 'gender';
 
-	const r = 12;
+	const r = 10;
 
 	const seriesNames = new Set();
 	const seriesColors = ['#7e93ee', '#ff99ff'];
@@ -242,7 +242,7 @@ $: if (typeof value !== "undefined") target2event[value]()
   }
 
   .step {
-    height: 80vh;
+    height: 110vh;
     display: flex;
     place-items: center;
     justify-content: center;
